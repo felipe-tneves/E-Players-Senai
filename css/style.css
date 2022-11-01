@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Titillium+Web&display=swap');
 
 *{
     margin: 0;
@@ -56,6 +56,27 @@ header {
     width: 495px;
     color: white;
     text-align: center;
+    font-family: 'Roboto';
+    font-size: 25px;
+}
+
+.texto-banner h1{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 75px;
+    font-weight: bold;
+}
+
+.texto-banner p{
+    margin-bottom: 30px;
+}
+
+.texto-banner a{
+    background-color: #C31616;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .secao-jogos {
@@ -79,4 +100,11 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.texto-sobre{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
