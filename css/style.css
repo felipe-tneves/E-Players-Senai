@@ -44,6 +44,14 @@ header{
     background-size: cover;
 }
 
+#carrossel img{
+    display: none;
+}
+
+.banner-ativo{
+    display: flex;
+}
+
 .posicao-texto{
     justify-content: flex-end;
 }
@@ -316,9 +324,9 @@ button{
 }
 
 @media screen and (max-width: 768px) {
-    h1{
+    /* h1{
         color:blue;
-    }
+    } */
     .barras{
         display: inline-block;
     }
@@ -330,6 +338,9 @@ button{
         top: 0;
         right: 65px;
         background-color: black;
+    }
+    .menu-ativo {
+        display: flex;
     }
     .menu a{
         text-align: center;

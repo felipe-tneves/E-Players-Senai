@@ -1,13 +1,41 @@
+$(document).ready(function () {
+
+    $("#carrossel img:eq(0)").addClass("banner-ativo").show()
+
+    setInterval(slide, 1000)
+
+    function slide() {
+        if($(".banner-ativo").next().length){
+            $(".banner-ativo").removeClass("banner-ativo").fadeOut().next().addClass("banner-ativo").fadeIn()
+        }else{
+            $(".banner-ativo").removeClass().fadeOut()
+            $("#carrossel img:eq(0)").addClass("banner-ativo").fadeIn()
+        }
+    }
+
+    $("#barras").click(function() {
+        // $("#menu").addClass("menu-ativo")
+        // $("#menu").toggleClass("menu-ativo")
+
+        if($("#menu").hasClass("menu-ativo")){
+            $("#menu").removeClass("menu-ativo")
+        }else{
+            $("#menu").addClass("menu-ativo")
+        }
+
+    })
+
+})
+
 let email = document.getElementById("campo-email");
 
-
-function mostrarPopup(){
+function mostrarPopup() {
     window.alert("Hello Word")
 }
 
-function renderizarNoticias(){
+function renderizarNoticias() {
     let espaco = document.getElementById("espaco-noticias");
-    
+
     let listaNoticias = [
         {
             imagem: "img/fifa.png",
@@ -45,7 +73,7 @@ function renderizarNoticias(){
 
     for (let index = 0; index < listaNoticias.length; index++) {
         const noticia = listaNoticias[index];
-        
+
         template += ` <div class="cardnews">
         <img src= ${noticia.imagem} alt="Foto da jogadora profissional">
         <h3>${noticia.titulo}</h3>
@@ -58,7 +86,7 @@ function renderizarNoticias(){
 // DOM - Document Object Model 
 // RegEx - Expressões Regulares
 
-function cadastrarEmail(){
+function cadastrarEmail() {
     let emailDigitado = email.value;
     console.log(emailDigitado)
 }
