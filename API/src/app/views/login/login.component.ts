@@ -22,10 +22,17 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.loginService.login(this.loginModel).subscribe( (response) => {
       this.mensagem = "Login com sucesso!";
+      localStorage.setItem("nomeUsuario", response.body.user.nome)
       this.router.navigateByUrl("/");
     }, (error) => {
       console.log(error)
       this.mensagem = error.error;
+
+      if(error.error == "Password is too short"){
+        this.mensagem = "Senha muito curta"
+      } else {
+        this.mensagem = error.error
+      }
     } )
   }
 }

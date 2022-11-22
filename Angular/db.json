@@ -1,3 +1,10 @@
 {
-    "users": []
+    "users": [
+        {
+            "id": 1,
+            "nome": "Tadeu",
+            "email": "tadeu@tadeu.com",
+            "senha": "senhadotadeu"
+        }
+    ]
 }

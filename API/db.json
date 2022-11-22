@@ -4,6 +4,12 @@
       "email": "thiago@mail.com",
       "password": "$2a$10$8RtnluPvSesnXAMWHXt8bens9vR0UqVdTJp.kJWzkQT7cne9XHgSq",
       "id": 1
+    },
+    {
+      "email": "tadeu@tadeu.com",
+      "password": "$2a$10$rjYINQx/wIH87beOR/DE7Ow4bOjhvKkV/NoPLEabaHLEoL2o03uDG",
+      "nome": "Tadeu",
+      "id": 2
     }
   ],
   "noticias": [
