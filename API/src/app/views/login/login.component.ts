@@ -20,6 +20,10 @@ export class LoginComponent implements OnInit {
   mensagem = "";
 
   onSubmit() {
+    console.log("Modelo: ", this.loginModel)
+
+    const listaPalavras: string[] = ["select ", "from ", "drop ", "or ", "having ", "group ", "by ", "insert ", "exec ", "\"", "\'", "--", "#", "*", ";"]
+
     this.loginService.login(this.loginModel).subscribe( (response) => {
       this.mensagem = "Login com sucesso!";
       localStorage.setItem("nomeUsuario", response.body.user.nome)
